@@ -1,8 +1,5 @@
 "use strict";
 
-// :NOTE: `Missing )                : org.graalvm.polyglot.PolyglotException: Error: Missing )` where exactly?
-// Not all error messages are user-friendly
-
 class Expression {
     constructor(evall, toStr, toDiff, pref, post) {
         this.evall = evall; this.toStr = toStr;
@@ -125,8 +122,6 @@ class Variable extends Expression {
 }
 
 const Update = new Map([
-	// :NOTE: actually copy-pasted declaration, it can be reduced to function 
-	// that takes class and returns (...args) => Object.create (class, ...args)
     ['+', (...args) => new Add(...args)],
     ['-', (...args) => new Subtract(...args)],
     ['*', (...args) => new Multiply(...args)],
