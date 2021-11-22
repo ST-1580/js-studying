@@ -168,9 +168,7 @@ function parse(expression) {
     return stack.pop();
 }
 
-// -------- HW_8 ---------
-
-// :NOTE: too many code for parser
+// -------------------------------
 
 class ParsingError extends Error {
     constructor(error) {
